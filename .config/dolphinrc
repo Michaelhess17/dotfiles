@@ -1,0 +1,23 @@
+MenuBar=Enabled
+
+[General]
+Version=202
+ViewPropsTimestamp=2024,11,23,21,56,51.614
+
+[IconsMode]
+PreviewSize=96
+TextWidthIndex=2
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[PreviewSettings]
+Plugins=audiothumbnail,comicbookthumbnail,cursorthumbnail,directorythumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,opendocumentthumbnail,svgthumbnail,windowsexethumbnail,windowsimagethumbnail,ffmpegthumbs,avif,evince,gnome-font-viewer,gnome-mobi-thumbnailer,gsf-office,jxl,totem
+
+[UiSettings]
+ColorScheme=Cattpuccin-Mocha
