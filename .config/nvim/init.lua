@@ -14,3 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 require("vim-options")
 
+-- Define the custom command Z to run :w | qa!
+vim.cmd('command! Z w | qa!')
+
+-- Define an abbreviation for wqa to expand to Z
+vim.cmd('cabbrev wqa Z')

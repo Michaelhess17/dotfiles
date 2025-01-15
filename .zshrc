@@ -36,7 +36,7 @@ alias lt='eza -a --tree --level=1 --icons=always $@'
 
 # App aliases
 alias cursor='/home/michael/.local/bin/cursor-*.AppImage'
-alias vim="nvim"
+alias vim="nvim -p"
 
 # Set up Pixi
 export PATH="/home/michael/.pixi/bin:$PATH"
@@ -45,7 +45,10 @@ eval "$(pixi completion --shell zsh)"
 
 # Add dotfiles git alias
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias code='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=code --file-forwarding com.visualstudio.code --reuse-window @@ %F @@'
-
+export PIXI_PROJECT_MANIFEST="/home/michael/"
 # Source current computer aliases
 source $HOME/.computer_ips
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
