@@ -45,6 +45,7 @@ eval "$(pixi completion --shell zsh)"
 
 # Add dotfiles git alias
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias code='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=code --file-forwarding com.visualstudio.code --reuse-window @@ %F @@'
 
 # Source current computer aliases
 source $HOME/.computer_ips
