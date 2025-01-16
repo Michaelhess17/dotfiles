@@ -48,6 +48,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 export PIXI_PROJECT_MANIFEST="/home/michael/"
 # Source current computer aliases
 source $HOME/.computer_ips
+export OPENAI_API_KEY=$(gpg --decrypt --armor -r michael $HOME/.openai 2&>/dev/null)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
