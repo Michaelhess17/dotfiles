@@ -18,7 +18,7 @@ return {
         })
         -- Open Terminal
         vim.api.nvim_create_autocmd("VimEnter", {
-            command = "new | resize 15 | terminal",
+            command = "new | resize 10 | terminal",
         })
         -- Move the terminal split to be below
         vim.api.nvim_create_autocmd("VimEnter", {
