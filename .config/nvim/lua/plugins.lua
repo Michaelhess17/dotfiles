@@ -15,8 +15,17 @@ return {{"github/copilot.vim",},
       "nvim-lua/plenary.nvim",
       "folke/trouble.nvim", -- optional
       "nvim-telescope/telescope.nvim"
-    }
-},
+      }
+    },
+    {
+  "amrbashir/nvim-docs-view",
+  lazy = true,
+  cmd = "DocsViewToggle",
+  opts = {
+    position = "right",
+    width = 60
+  },
+}
 }
 
 
