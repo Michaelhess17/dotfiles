@@ -1,4 +1,4 @@
-# Hyprland Dotfiles (Fedora 41)
+# Hyprland Dotfiles (NixOS 24.11 Stable)
 
 This repository was setup using a tutorial [here](https://www.ackama.com/articles/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/).
 
