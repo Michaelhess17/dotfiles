@@ -10,6 +10,9 @@ application/x-extension-shtml=org.mozilla.firefox.desktop
 application/xhtml+xml=org.mozilla.firefox.desktop
 application/x-extension-xhtml=org.mozilla.firefox.desktop
 application/x-extension-xht=org.mozilla.firefox.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-1N4002.desktop
+message/rfc822=userapp-Thunderbird-1N4002.desktop
+x-scheme-handler/mid=userapp-Thunderbird-1N4002.desktop
 
 [Added Associations]
 x-scheme-handler/http=org.mozilla.firefox.desktop;
@@ -22,5 +25,6 @@ application/x-extension-shtml=org.mozilla.firefox.desktop;
 application/xhtml+xml=org.mozilla.firefox.desktop;
 application/x-extension-xhtml=org.mozilla.firefox.desktop;
 application/x-extension-xht=org.mozilla.firefox.desktop;
-
 text/plain=org.xfce.mousepad.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-1N4002.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-1N4002.desktop;

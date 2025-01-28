@@ -17,15 +17,38 @@ return {{"github/copilot.vim",},
       "nvim-telescope/telescope.nvim"
       }
     },
-    {
-  "amrbashir/nvim-docs-view",
-  lazy = true,
-  cmd = "DocsViewToggle",
+  {
+    "amrbashir/nvim-docs-view",
+    lazy = true,
+    cmd = "DocsViewToggle",
+    opts = {
+      position = "right",
+      width = 60
+    },
+  }, 
+{
+  "folke/which-key.nvim",
+  event = "VeryLazy",
   opts = {
-    position = "right",
-    width = 60
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
   },
-}
+  keys = {
+      {
+      "<leader>?",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "Buffer Local Keymaps (which-key)",
+      },
+    },
+  },
+  {
+    "vhyrro/luarocks.nvim",
+    priority = 1000,
+    config = true,
+  },
 }
 
 
