@@ -18,6 +18,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# OpenAI Key
+export OPENAI_API_KEY=$(cat ~/.openai_key)
+
 # Starting down here, are set in user.nix
 
 #ZSH_THEME="xiong-chiamiov-plus"

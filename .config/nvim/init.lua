@@ -14,11 +14,23 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 require("vim-options")
 
+-- recommended for avante.nvim
+-- views can only be fully collapsed with the global statusline
+vim.opt.laststatus = 3
+
 -- Define the custom command Z to run :w | qa!
 vim.cmd('command! Z w | qa!')
 
 -- Define an abbreviation for wqa to expand to Z
 vim.cmd('cabbrev wqa Z')
+
+
+local which_key = require('which-key')
+which_key.add({
+    { "<leader>ac", "<cmd>AvanteChat<cr>", desc = "avante: start chat", mode = "n" },
+})
+
+
 
 --local harpoon = require("harpoon")
 
