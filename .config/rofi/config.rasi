@@ -5,12 +5,12 @@
 
 /* ---- Window ---- */
 window {
-    width:	50%;
+    width:	60%;
 }
 /* ---- Listview ---- */
 listview {
-  columns: 5;
-  lines: 3;
+  columns: 6;
+  lines: 4;
   fixed-height:	true;
 }
 
@@ -22,10 +22,10 @@ element {
 }
 
 element-icon {
-  size: 8%;
+  size: 6%;
 }
 
 element-text {
-  font: "JetBrainsMono Nerd Font SemiBold 12";
+  font: "FiraCode Nerd Font SemiBold 13";
   horizontal-align: 0.5;
 }

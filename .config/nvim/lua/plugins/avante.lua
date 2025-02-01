@@ -5,12 +5,12 @@ return {
   version = false, -- set this if you want to always pull the latest change
   opts = {
     provider = "ollama",
-    suggestion_proider = "copilot",
+    suggestion_proider = "openai",
     vendors = {
       ---@type AvanteProvider
       ollama = {
         endpoint = "http://localhost:11434/v1",
-        model = "deepseek-r1:14b",
+        model = "deepseekr1-14b_2",
         api_key_name = "",
         parse_curl_args = function(opts, code_opts)
           return {
@@ -22,7 +22,7 @@ return {
             body = {
               model = opts.model,
               messages = require("avante.providers").copilot.parse_messages(code_opts),    -- you can make your own message, but this is very advanced
-              max_tokens = 4096,
+              -- max_tokens = 4096,
               stream = true,
             },
           }
@@ -31,6 +31,30 @@ return {
           require("avante.providers").openai.parse_response(data_stream, event_state, opts)
         end,
       },
+    ollama_leibniz = {
+        endpoint = "http://localhost:11435/v1",
+        model = "deepseek-r1:7b_2",
+        api_key_name = "",
+        parse_curl_args = function(opts, code_opts)
+          return {
+            url = opts.endpoint .. "/chat/completions",
+            headers = {
+              ["Accept"] = "application/json",
+              ["Content-Type"] = "application/json",
+            },
+            body = {
+              model = opts.model,
+              messages = require("avante.providers").copilot.parse_messages(code_opts),    -- you can make your own message, but this is very advanced
+              -- max_tokens = 4096,
+              stream = true,
+            },
+          }
+        end,
+        parse_response_data = function(data_stream, event_state, opts)
+          require("avante.providers").openai.parse_response(data_stream, event_state, opts)
+        end,
+      },
+
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
