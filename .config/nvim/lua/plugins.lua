@@ -49,6 +49,11 @@ return {{"github/copilot.vim",},
     priority = 1000,
     config = true,
   },
+  {"3rd/image.nvim",
+   build = false,
+   opts = {processor = "magick_cli"}
+  },
+  -- {'edluffy/hologram.nvim'},
   {
   "yetone/avante.nvim",
   event = "VeryLazy",
@@ -106,6 +111,16 @@ return {{"github/copilot.vim",},
       ft = { "markdown", "Avante" },
     },
   },
+  {
+   "williamboman/mason.nvim",
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+  },
+  {
+   "neovim/nvim-lspconfig", 
+  },
+  { "fraso-dev/nvim-listchars", opts = true },
 }
 }
 

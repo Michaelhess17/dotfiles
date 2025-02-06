@@ -6,13 +6,15 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Set-up icons for files/folders in terminal
-alias ls='eza -a --icons=always $@'
+alias ls='eza --icons=always $@'
 alias ll='eza -al --icons=always $@'
 alias lt='eza -a --tree --level=1 --icons=always $@'
 
 alias nvim='nvim -p'
 alias flake-rebuild='sudo nixos-rebuild switch --flake /home/michael/NixOS-Hyprland/#default'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/run/current-system/sw/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias windows='vmware -X /home/michael/vmware/Windows\ 10\ x64/Windows\ 10\ x64.vmx'
+alias icat='kitten icat'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -20,6 +22,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # OpenAI Key
 export OPENAI_API_KEY=$(cat ~/.openai_key)
+
+# Computer IPs
+source ~/.computer_ips 
 
 # Starting down here, are set in user.nix
 

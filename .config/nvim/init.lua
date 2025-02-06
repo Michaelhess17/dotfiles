@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 require("vim-options")
 
+vim.opt.colorcolumn = "79"
 -- recommended for avante.nvim
 -- views can only be fully collapsed with the global statusline
 vim.opt.laststatus = 3
@@ -30,8 +31,24 @@ which_key.add({
     { "<leader>ac", "<cmd>AvanteChat<cr>", desc = "avante: start chat", mode = "n" },
 })
 
+-- LSPs
+require("mason").setup()
+require("mason-lspconfig").setup()
+require'lspconfig'.bashls.setup{}
+require'lspconfig'.nil_ls.setup{}
+require'lspconfig'.julials.setup{}
+require'lspconfig'.lua_ls.setup{}
+require'lspconfig'.pylsp.setup{}
 
-
+require('neo-tree').setup {
+  filesystem = {
+    filtered_items = {
+      visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+      hide_dotfiles = true,
+      hide_gitignored = false,
+    },
+  }
+}
 --local harpoon = require("harpoon")
 
 -- REQUIRED
