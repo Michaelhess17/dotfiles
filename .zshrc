@@ -16,6 +16,11 @@ alias config='/run/current-system/sw/bin/git --git-dir=$HOME/.cfg/ --work-tree=$
 alias windows='vmware -X /home/michael/vmware/Windows\ 10\ x64/Windows\ 10\ x64.vmx'
 alias icat='kitten icat'
 
+# Create shell proxy to connect to Emory VPN through another machine
+ssh_proxy() {
+    ssh -A -t alarm@alarm ssh -A -t "$@"
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
