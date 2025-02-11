@@ -272,11 +272,11 @@
 	"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
 	"tooltip-format-ethernet": "{ifname} 󰌘",
 	"tooltip-format-disconnected": "󰌙 Disconnected",
-	"max-length": 30,
+	"max-length": 35,
 	"format-icons": [
-		"󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
+		"󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "
 	],
-	"on-click-right": "kitty nmtui"
+	"on-click-right": "iwgtk"
 },
 "network#speed": {
 	"interval": 1,

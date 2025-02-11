@@ -26,6 +26,9 @@
 	"temperature", 
 	"memory",
 	"disk", 
+    "custom/file_manager",
+    "custom/tty",
+    "custom/browser",
 	],
   
 "modules-center": [
@@ -35,13 +38,14 @@
 	], 
 
 "modules-right": [
-	"custom/weather",	  
+	"custom/weather",
+    "custom/separator#blank_1_5",
 	"battery", 
 	"backlight",
 	"bluetooth",
 	"network",
 	"custom/updater",
-	"custom/cycle_wall",
+	"custom/settings",
 	"custom/lock", 
 	],
 },
