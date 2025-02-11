@@ -216,7 +216,7 @@ return {{"github/copilot.vim",},
       "<leader>N",
       desc = "Neovim News",
       function()
-        Snacks.win({
+       Snacks.win({
           file = vim.api.nvim_get_runtime_file("doc/news.txt", false)[1],
           width = 0.6,
           height = 0.6,

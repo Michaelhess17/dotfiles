@@ -41,18 +41,18 @@ require'lspconfig'.lua_ls.setup{}
 require'lspconfig'.pylsp.setup{}
 
 -- show files not in GitHub repos when in NeoTree
-require('neo-tree').setup {
-  filesystem = {
-    filtered_items = {
-      visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
-      hide_dotfiles = true,
-      hide_gitignored = false,
-    },
-  }
-}
+-- require('neo-tree').setup {
+--   filesystem = {
+--     filtered_items = {
+--       visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+--       hide_dotfiles = true,
+--       hide_gitignored = false,
+--     },
+--   }
+-- }
 
 -- Autocmd on VimEnter to start the snacks dashboard
-local snacks = require("snacks")
-vim.api.nvim_create_autocmd("VimEnter", {
-    command = "lua Snacks.dashboard()",
-})
+-- local snacks = require("snacks")
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--     command = "lua Snacks.dashboard()",
+-- })
