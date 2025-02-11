@@ -40,6 +40,7 @@ require'lspconfig'.julials.setup{}
 require'lspconfig'.lua_ls.setup{}
 require'lspconfig'.pylsp.setup{}
 
+-- show files not in GitHub repos when in NeoTree
 require('neo-tree').setup {
   filesystem = {
     filtered_items = {
@@ -49,19 +50,9 @@ require('neo-tree').setup {
     },
   }
 }
---local harpoon = require("harpoon")
 
--- REQUIRED
---harpoon:setup()
--- REQUIRED
-
---vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
---vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
---
---vim.keymap.set("n", "<C-h>", function() harpoon:list():select(1) end)
---vim.keymap.set("n", "<C-t>", function() harpoon:list():select(2) end)
---vim.keymap.set("n", "<C-n>", function() harpoon:list():select(3) end)
---vim.keymap.set("n", "<C-s>", function() harpoon:list():select(4) end)
----- Toggle previous & next buffers stored within Harpoon list
---vim.keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end)
---vim.keymap.set("n", "<C-S-N>", function() harpoon:list():next() end)
+-- Autocmd on VimEnter to start the snacks dashboard
+local snacks = require("snacks")
+vim.api.nvim_create_autocmd("VimEnter", {
+    command = "lua Snacks.dashboard()",
+})
