@@ -276,7 +276,7 @@
 	"format-icons": [
 		"󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "
 	],
-	"on-click-right": "iwgtk"
+	"on-click-right": "kitty nmtui"
 },
 "network#speed": {
 	"interval": 1,
