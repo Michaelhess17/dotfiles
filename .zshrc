@@ -20,7 +20,9 @@ alias icat='kitten icat'
 ssh_proxy() {
     ssh -A -t alarm@alarm ssh -A -t "$@"
 }
-
+sftp_proxy() {
+    ssh -A -t alarm@alarm sftp "$@"
+}
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
