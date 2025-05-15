@@ -3,3 +3,13 @@
 [user]
 	email = michaelhess17@yahoo.com
 	name = Michael Hess
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[safe]
+	directory = /nix/store/zb5p9wzzi648rmxzbc20x5bl7fgyv6sz-julia-general-repoified/./.git
+	directory = /nix/store/zb5p9wzzi648rmxzbc20x5bl7fgyv6sz-julia-general-repoified/./.git
+	directory = *
+	directory = *

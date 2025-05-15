@@ -43,6 +43,9 @@ require'lspconfig'.nil_ls.setup{}
 require'lspconfig'.julials.setup{}
 require'lspconfig'.lua_ls.setup{}
 require'lspconfig'.pylsp.setup{}
+require'lspconfig'.vale_ls.setup{}
+
+vim.env.VALE_CONFIG_PATH = "/home/michael/.config/vale/.vale.ini"
 
 -- show files not in GitHub repos when in NeoTree
 require('neo-tree').setup {
