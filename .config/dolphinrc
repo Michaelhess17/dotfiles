@@ -1,5 +1,8 @@
 MenuBar=Enabled
 
+[CompactMode]
+PreviewSize=22
+
 [General]
 LockPanels=false
 Version=202
@@ -15,7 +18,6 @@ Places Icons Static Size=32
 
 [MainWindow]
 MenuBar=Disabled
-ToolBarsMovable=Disabled
 
 [PlacesPanel]
 IconSize=32

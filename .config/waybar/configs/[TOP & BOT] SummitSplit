@@ -22,31 +22,32 @@
 "margin-right": 8,
 
 "modules-left": [
-	"cpu", 
-	"temperature", 
+	"cpu",
+	"temperature",
 	"memory",
-	"disk", 
+	"disk",
     "custom/file_manager",
     "custom/tty",
     "custom/browser",
+	"custom/cava_mviz",
 	],
-  
+
 "modules-center": [
 	"idle_inhibitor",
-	"clock",  
+	"clock",
 	"custom/light_dark",
-	], 
+	],
 
 "modules-right": [
 	"custom/weather",
     "custom/separator#blank_1_5",
-	"battery", 
+	"battery",
 	"backlight",
 	"bluetooth",
 	"network",
 	"custom/updater",
 	"custom/settings",
-	"custom/lock", 
+	"custom/lock",
 	],
 },
 
@@ -72,12 +73,12 @@
 //"margin-bottom": 0,
 
 "modules-left": [
-	"custom/menu",  
+	"custom/menu",
 	"wlr/taskbar",
 	 ],
 
 "modules-center": [
-	"hyprland/workspaces#rw", 
+	"hyprland/workspaces#rw",
 	],
 
 "modules-right": [
@@ -87,8 +88,8 @@
 	"mpris",
 	"keyboard-state",
 	"pulseaudio",
-	//"wireplumber", 
-	"pulseaudio#microphone",	  
+	//"wireplumber",
+	"pulseaudio#microphone",
 	"custom/power",
-	],  
+	],
 }],

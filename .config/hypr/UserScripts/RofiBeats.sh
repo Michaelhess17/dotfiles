@@ -10,10 +10,12 @@ iDIR="$HOME/.config/swaync/icons"
 
 # Online Stations. Edit as required
 declare -A online_music=(
+  ["Radio - Icecast 🎧🎶"]="http://localhost:9999/my-radio.aac"
   ["Radio - Lofi Girl 🎧🎶"]="https://play.streamafrica.net/lofiradio"
   ["Radio - Chillhop 🎧🎶"]="http://stream.zeno.fm/fyn8eh3h5f8uv"
+  ["Radio - KWSX 🎧🎶"]="https://stream.kwsx.online/listen/kwsx/radio.mp3"
   ["FM - Easy Rock 96.3 📻🎶"]="https://radio-stations-philippines.com/easy-rock"
-  ["FM - Easy Rock - Baguio 91.9 📻🎶"]="https://radio-stations-philippines.com/easy-rock-baguio" 
+  ["FM - Easy Rock - Baguio 91.9 📻🎶"]="https://radio-stations-philippines.com/easy-rock-baguio"
   ["FM - Love Radio 90.7 📻🎶"]="https://radio-stations-philippines.com/love"
   ["FM - WRock - CEBU 96.3 📻🎶"]="https://onlineradio.ph/126-96-3-wrock.html"
   ["FM - Fresh Philippines 📻🎶"]="https://onlineradio.ph/553-fresh-fm.html"
@@ -54,13 +56,13 @@ play_local_music() {
   fi
 
   # Find the corresponding file path based on user's choice and set that to play the song then continue on the list
-  for (( i=0; i<"${#filenames[@]}"; ++i )); do
+  for ((i = 0; i < "${#filenames[@]}"; ++i)); do
     if [ "${filenames[$i]}" = "$choice" ]; then
-		
-	    notification "$choice"
+
+      notification "$choice"
 
       # Play the selected local music file using mpv
-      mpv --playlist-start="$i" --loop-playlist --vid=no  "${local_music[@]}"
+      mpv --playlist-start="$i" --loop-playlist --vid=no "${local_music[@]}"
 
       break
     fi
@@ -86,7 +88,7 @@ play_online_music() {
   link="${online_music[$choice]}"
 
   notification "$choice"
-  
+
   # Play the selected online music using mpv
   mpv --shuffle --vid=no "$link"
 }
@@ -94,27 +96,26 @@ play_online_music() {
 # Check if an online music process is running and send a notification, otherwise run the main function
 pkill mpv && notify-send -u low -i "$iDIR/music.png" "Music stopped" || {
 
-# Check if rofi is already running
-if pidof rofi > /dev/null; then
-  pkill rofi
-fi
+  # Check if rofi is already running
+  if pidof rofi >/dev/null; then
+    pkill rofi
+  fi
 
-
-# Prompt the user to choose between local and online music
-user_choice=$(printf "Play from Online Stations\nPlay from Music Folder\nShuffle Play from Music Folder" | rofi -dmenu -config ~/.config/rofi/config-rofi-Beats-menu.rasi -p "Select music source")
+  # Prompt the user to choose between local and online music
+  user_choice=$(printf "Play from Online Stations\nPlay from Music Folder\nShuffle Play from Music Folder" | rofi -dmenu -config ~/.config/rofi/config-rofi-Beats-menu.rasi -p "Select music source")
 
   case "$user_choice" in
-    "Play from Music Folder")
-      play_local_music
-      ;;
-    "Play from Online Stations")
-      play_online_music
-      ;;
-    "Shuffle Play from Music Folder")
-      shuffle_local_music
-      ;;
-    *)
-      echo "Invalid choice"
-      ;;
+  "Play from Music Folder")
+    play_local_music
+    ;;
+  "Play from Online Stations")
+    play_online_music
+    ;;
+  "Shuffle Play from Music Folder")
+    shuffle_local_music
+    ;;
+  *)
+    echo "Invalid choice"
+    ;;
   esac
 }
